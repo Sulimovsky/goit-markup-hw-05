@@ -107,10 +107,14 @@ p {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+
+    transition: color 250ms var(--main-cubic-bezier);
 }
 
 .header-link .location {
     color: var(--backlight-color);
+
+    transition: color 250ms var(--main-cubic-bezier);
 }
 
 .header-link .location:focus,
@@ -143,6 +147,8 @@ p {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+
+    transition: color 250ms var(--main-cubic-bezier);
 }
 
 .contacts-link:hover,
@@ -162,6 +168,8 @@ p {
     margin-right: 10px;
 
     fill: var(--primary-text-color);
+
+    transition: fill 250ms var(--main-cubic-bezier);
 }
 
 .smartphone {
