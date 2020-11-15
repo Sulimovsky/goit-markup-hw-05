@@ -9,6 +9,7 @@
     --heading-h2-h6-color: #212121; 
     --backlight-color: #2196F3;
     --secondary-text-color: #212121;
+    --main-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -53,6 +54,10 @@ p {
 }
 
 /* Header */
+header {
+    border-bottom: 1px solid #ECECEC;;
+}
+
 .container-header {
     display: flex;
     align-items: center;
@@ -91,6 +96,7 @@ p {
 }
 
 .list-nav .header-link {
+    position: relative;
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -101,10 +107,37 @@ p {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+
+    transition: color 250ms var(--main-cubic-bezier);
 }
 
 .header-link .location {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--backlight-color);
+
+    transition: color 250ms var(--main-cubic-bezier);
+}
+
+.location::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: var(--backlight-color);
+
+    transition: background-color 250ms var(--main-cubic-bezier);
+}
+
+.location:hover::after {
+    background-color: var(--secondary-text-color);
 }
 
 .header-link .location:focus,
@@ -137,6 +170,8 @@ p {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+
+    transition: color 250ms var(--main-cubic-bezier);
 }
 
 .contacts-link:hover,
@@ -156,6 +191,8 @@ p {
     margin-right: 10px;
 
     fill: var(--primary-text-color);
+
+    transition: fill 250ms var(--main-cubic-bezier);
 }
 
 .smartphone {
@@ -189,6 +226,8 @@ p {
 
 .filter button {
     cursor: pointer;
+
+    transition: all 250ms var(--main-cubic-bezier);
 }
 
 .btn-one {
@@ -369,6 +408,8 @@ footer {
     height: 44px;
 
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms var(--main-cubic-bezier);
 }
 
 .footer-social-link:hover,

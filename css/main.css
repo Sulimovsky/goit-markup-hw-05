@@ -399,7 +399,8 @@ h1 {
     margin-right: 30px;
 }
 
-.occupation-item {
+.occupation-link {
+    display: block;
     position: relative;
 }
 
